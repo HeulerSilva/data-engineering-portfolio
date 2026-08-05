@@ -1,0 +1,30 @@
+# AWS credentials — NEVER commit these
+*.env
+.env.*
+credentials
+aws_credentials.txt
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+*~
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Logs
+*.log
+
+# Internal project notes — not for public repo
+COMMIT_GUIDE.md
