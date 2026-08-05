@@ -1,0 +1,46 @@
+# 📊 Data Engineering Portfolio — Heuler Silva
+
+> *Turning complex data ecosystems into business leverage.*
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-heulersilva-0077B5?style=flat&logo=linkedin&logoColor=white)](https://linkedin.com/in/heulersilva)
+[![GitHub](https://img.shields.io/badge/GitHub-HeulerSilva-181717?style=flat&logo=github&logoColor=white)](https://github.com/HeulerSilva)
+
+---
+
+## 🧭 Overview
+
+This repository serves as the **central index** of my Data Engineering projects — each built as an independent, production-inspired lab exploring real-world architectures, tools, and cloud services.
+
+Every project here reflects hands-on decisions: infrastructure choices, performance trade-offs, data quality strategies, and lessons learned from real failures and real fixes.
+
+---
+
+## 🗂️ Projects
+
+| # | Project | Stack | Status |
+|---|---------|-------|--------|
+| 01 | [AWS Redshift DW + Looker Studio](./data-engineering-aws-redshift-dw) | Redshift Serverless · S3 · SQL · Looker Studio | ✅ Complete |
+| 02 | NoSQL on AWS | DynamoDB · MongoDB · DocumentDB | 🔄 In progress |
+| 03 | Spark & PySpark Processing | PySpark · EMR · Delta Lake | 🔜 Planned |
+| 04 | Airflow Pipeline Orchestration | Airflow · Docker · Python | 🔜 Planned |
+
+---
+
+## 🛠️ Core Stack
+
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
+![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
+![Redshift](https://img.shields.io/badge/Redshift-8C4FFF?style=flat&logo=amazon-redshift&logoColor=white)
+![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat&logo=databricks&logoColor=white)
+![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
+![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=flat&logo=docker&logoColor=white)
+
+---
+
+## 👤 About
+
+**Heuler Ferreira Silva** — Senior Data Engineer | Analytics Architect  
+15+ years in enterprise data ecosystems · SQL Expert · Modern Data Stack  
+📍 Brazil (Remote) · [linkedin.com/in/heulersilva](https://linkedin.com/in/heulersilva)
