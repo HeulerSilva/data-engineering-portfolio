@@ -19,7 +19,7 @@ Every project here reflects hands-on decisions: infrastructure choices, performa
 
 | # | Project | Stack | Status |
 |---|---------|-------|--------|
-| 01 | [AWS Redshift DW + Looker Studio](./data-engineering-aws-redshift-dw) | Redshift Serverless · S3 · SQL · Looker Studio | ✅ Complete |
+| 01 | [AWS Redshift DW + Looker Studio](./data-engineering-aws-redshift-dw/README.md) | Redshift Serverless · S3 · SQL · Looker Studio | ✅ Complete |
 | 02 | NoSQL on AWS | DynamoDB · MongoDB · DocumentDB | 🔄 In progress |
 | 03 | Spark & PySpark Processing | PySpark · EMR · Delta Lake | 🔜 Planned |
 | 04 | Airflow Pipeline Orchestration | Airflow · Docker · Python | 🔜 Planned |
