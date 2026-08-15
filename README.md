@@ -20,9 +20,11 @@ Every project here reflects hands-on decisions: infrastructure choices, performa
 | # | Project | Stack | Status |
 |---|---------|-------|--------|
 | 01 | [AWS Redshift DW + Looker Studio](./data-engineering-aws-redshift-dw/README.md) | Redshift Serverless · S3 · SQL · Looker Studio | ✅ Complete |
-| 02 | NoSQL on AWS | DynamoDB · MongoDB · DocumentDB | 🔄 In progress |
-| 03 | Spark & PySpark Processing | PySpark · EMR · Delta Lake | 🔜 Planned |
+| 02 | [Spark & Delta Lake Fundamentals](https://github.com/HeulerSilva/DataLake/tree/main/DataFrame_Base1) | PySpark · Delta Lake · Unity Catalog | ✅ Complete |
+| 03 | [ETL Pipeline — IBGE Public API](https://github.com/HeulerSilva/DataLake/tree/main/ETL_Base1) | PySpark · Delta Lake · REST API | ✅ Complete |
 | 04 | Airflow Pipeline Orchestration | Airflow · Docker · Python | 🔜 Planned |
+
+📁 [View Databricks lab projects →](https://github.com/HeulerSilva/DataLake)
 
 ---
 
