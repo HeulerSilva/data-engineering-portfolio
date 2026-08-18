@@ -34,9 +34,9 @@
 │                   4 RPUs | sa-east-1                            │
 │                                                                 │
 │   ┌─────────────────┐         ┌──────────────────────────┐      │
-│   │  STAGING TABLES │  ──►   │   ANALYTICAL LAYER       │      │
+│   │  STAGING TABLES │  ──►    │   ANALYTICAL LAYER       │      │
 │   │  - clientes     │         │   fatovendas             │      │
-│   │  - produtos     │         │   (denormalized fact      │      │
+│   │  - produtos     │         │   (denormalized fact     │      │
 │   │  - vendas       │         │    table — Star Schema)  │      │
 │   │  - vendedores   │         └──────────────────────────┘      │
 │   │  - itensvenda   │                                           │
