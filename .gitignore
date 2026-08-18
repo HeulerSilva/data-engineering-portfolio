@@ -1,6 +1,5 @@
 # AWS credentials — NEVER commit these
-*.env
-.env.*
+.env
 credentials
 aws_credentials.txt
 *.key
