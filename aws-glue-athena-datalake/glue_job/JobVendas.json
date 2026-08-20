@@ -1,0 +1,1406 @@
+{
+	"dag": {
+		"node-1787236374296": {
+			"classification": "DataSource",
+			"type": "Catalog",
+			"name": "Vendas",
+			"inputs": [],
+			"database": "sales",
+			"table": "vendas_csv",
+			"runtimeParameters": [],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/data-catalog.8b8a27f5.svg",
+			"generatedNodeName": "Vendas_node1787236374296",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvendedor",
+						"fullPath": [
+							"idvendedor"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idcliente",
+						"fullPath": [
+							"idcliente"
+						],
+						"type": "long"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787236710028": {
+			"classification": "Transform",
+			"type": "ApplyMapping",
+			"name": "VendasMapping",
+			"inputs": [
+				"node-1787236374296"
+			],
+			"mapping": [
+				{
+					"toKey": "idvenda",
+					"fromPath": [
+						"idvenda"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "idvendedor_vendas",
+					"fromPath": [
+						"idvendedor"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "idcliente_vendas",
+					"fromPath": [
+						"idcliente"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "data",
+					"fromPath": [
+						"data"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "total",
+					"fromPath": [
+						"total"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				}
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Apply-mapping.2595af12.svg",
+			"generatedNodeName": "VendasMapping_node1787236710028",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvendedor_vendas",
+						"fullPath": [
+							"idvendedor_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idcliente_vendas",
+						"fullPath": [
+							"idcliente_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787236907200": {
+			"classification": "DataSource",
+			"type": "Catalog",
+			"name": "ItensVendas",
+			"inputs": [],
+			"database": "sales",
+			"table": "itensvenda_csv",
+			"runtimeParameters": [],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/data-catalog.8b8a27f5.svg",
+			"generatedNodeName": "ItensVendas_node1787236907200",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idproduto",
+						"fullPath": [
+							"idproduto"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787236962322": {
+			"classification": "Transform",
+			"type": "ApplyMapping",
+			"name": "ItensVendasMapping",
+			"inputs": [
+				"node-1787236907200"
+			],
+			"mapping": [
+				{
+					"toKey": "idproduto_itensvendas",
+					"fromPath": [
+						"idproduto"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "idvenda_itensvendas",
+					"fromPath": [
+						"idvenda"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "quantidade",
+					"fromPath": [
+						"quantidade"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "valorunitario",
+					"fromPath": [
+						"valorunitario"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "valortotal",
+					"fromPath": [
+						"valortotal"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "desconto",
+					"fromPath": [
+						"desconto"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				}
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Apply-mapping.2595af12.svg",
+			"generatedNodeName": "ItensVendasMapping_node1787236962322",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idproduto_itensvendas",
+						"fullPath": [
+							"idproduto_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda_itensvendas",
+						"fullPath": [
+							"idvenda_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787237877865": {
+			"classification": "Transform",
+			"type": "Join",
+			"name": "JoinVendas_ItensVendas",
+			"inputs": [
+				"node-1787236710028",
+				"node-1787236962322"
+			],
+			"joinType": "equijoin",
+			"columns": [
+				{
+					"from": "node-1787236710028",
+					"keys": [
+						"idvenda"
+					]
+				},
+				{
+					"from": "node-1787236962322",
+					"keys": [
+						"idvenda_itensvendas"
+					]
+				}
+			],
+			"columnConditions": [
+				"="
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Join.493120c2.svg",
+			"generatedNodeName": "JoinVendas_ItensVendas_node1787237877865",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idcliente_vendas",
+						"fullPath": [
+							"idcliente_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda_itensvendas",
+						"fullPath": [
+							"idvenda_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idproduto_itensvendas",
+						"fullPath": [
+							"idproduto_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvendedor_vendas",
+						"fullPath": [
+							"idvendedor_vendas"
+						],
+						"type": "long"
+					}
+				]
+			]
+		},
+		"node-1787238095625": {
+			"classification": "DataSource",
+			"type": "Catalog",
+			"name": "Clientes",
+			"inputs": [],
+			"database": "sales",
+			"table": "clientes_csv",
+			"runtimeParameters": [],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/data-catalog.8b8a27f5.svg",
+			"generatedNodeName": "Clientes_node1787238095625",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idcliente",
+						"fullPath": [
+							"idcliente"
+						],
+						"type": "long"
+					},
+					{
+						"key": "cliente",
+						"fullPath": [
+							"cliente"
+						],
+						"type": "string"
+					},
+					{
+						"key": "estado",
+						"fullPath": [
+							"estado"
+						],
+						"type": "string"
+					},
+					{
+						"key": "sexo",
+						"fullPath": [
+							"sexo"
+						],
+						"type": "string"
+					},
+					{
+						"key": "status",
+						"fullPath": [
+							"status"
+						],
+						"type": "string"
+					}
+				]
+			]
+		},
+		"node-1787238168659": {
+			"classification": "Transform",
+			"type": "Join",
+			"name": "JoinClientes",
+			"inputs": [
+				"node-1787238095625",
+				"node-1787237877865"
+			],
+			"joinType": "equijoin",
+			"columns": [
+				{
+					"from": "node-1787238095625",
+					"keys": [
+						"idcliente"
+					]
+				},
+				{
+					"from": "node-1787237877865",
+					"keys": [
+						"idcliente_vendas"
+					]
+				}
+			],
+			"columnConditions": [
+				"="
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Join.493120c2.svg",
+			"generatedNodeName": "JoinClientes_node1787238168659",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idcliente_vendas",
+						"fullPath": [
+							"idcliente_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "sexo",
+						"fullPath": [
+							"sexo"
+						],
+						"type": "string"
+					},
+					{
+						"key": "cliente",
+						"fullPath": [
+							"cliente"
+						],
+						"type": "string"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					},
+					{
+						"key": "estado",
+						"fullPath": [
+							"estado"
+						],
+						"type": "string"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idcliente",
+						"fullPath": [
+							"idcliente"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda_itensvendas",
+						"fullPath": [
+							"idvenda_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "status",
+						"fullPath": [
+							"status"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idvendedor_vendas",
+						"fullPath": [
+							"idvendedor_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idproduto_itensvendas",
+						"fullPath": [
+							"idproduto_itensvendas"
+						],
+						"type": "long"
+					}
+				]
+			]
+		},
+		"node-1787238328131": {
+			"classification": "DataSource",
+			"type": "Catalog",
+			"name": "Produtos",
+			"inputs": [],
+			"database": "sales",
+			"table": "produtos_csv",
+			"runtimeParameters": [],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/data-catalog.8b8a27f5.svg",
+			"generatedNodeName": "Produtos_node1787238328131",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idproduto",
+						"fullPath": [
+							"idproduto"
+						],
+						"type": "long"
+					},
+					{
+						"key": "produto",
+						"fullPath": [
+							"produto"
+						],
+						"type": "string"
+					},
+					{
+						"key": "preco",
+						"fullPath": [
+							"preco"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787238362075": {
+			"classification": "DataSource",
+			"type": "Catalog",
+			"name": "Vendedores",
+			"inputs": [],
+			"database": "sales",
+			"table": "vendedores_csv",
+			"runtimeParameters": [],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/data-catalog.8b8a27f5.svg",
+			"generatedNodeName": "Vendedores_node1787238362075",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idvendedor",
+						"fullPath": [
+							"idvendedor"
+						],
+						"type": "long"
+					},
+					{
+						"key": "nome",
+						"fullPath": [
+							"nome"
+						],
+						"type": "string"
+					}
+				]
+			]
+		},
+		"node-1787238421977": {
+			"classification": "Transform",
+			"type": "Join",
+			"name": "JoinProdutos",
+			"inputs": [
+				"node-1787238328131",
+				"node-1787238168659"
+			],
+			"joinType": "equijoin",
+			"columns": [
+				{
+					"from": "node-1787238328131",
+					"keys": [
+						"idproduto"
+					]
+				},
+				{
+					"from": "node-1787238168659",
+					"keys": [
+						"idproduto_itensvendas"
+					]
+				}
+			],
+			"columnConditions": [
+				"="
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Join.493120c2.svg",
+			"generatedNodeName": "JoinProdutos_node1787238421977",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idcliente_vendas",
+						"fullPath": [
+							"idcliente_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					},
+					{
+						"key": "cliente",
+						"fullPath": [
+							"cliente"
+						],
+						"type": "string"
+					},
+					{
+						"key": "sexo",
+						"fullPath": [
+							"sexo"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idproduto",
+						"fullPath": [
+							"idproduto"
+						],
+						"type": "long"
+					},
+					{
+						"key": "estado",
+						"fullPath": [
+							"estado"
+						],
+						"type": "string"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idcliente",
+						"fullPath": [
+							"idcliente"
+						],
+						"type": "long"
+					},
+					{
+						"key": "status",
+						"fullPath": [
+							"status"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idvenda_itensvendas",
+						"fullPath": [
+							"idvenda_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "produto",
+						"fullPath": [
+							"produto"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idproduto_itensvendas",
+						"fullPath": [
+							"idproduto_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvendedor_vendas",
+						"fullPath": [
+							"idvendedor_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "preco",
+						"fullPath": [
+							"preco"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787238428993": {
+			"classification": "Transform",
+			"type": "Join",
+			"name": "JoinVendedores",
+			"inputs": [
+				"node-1787238362075",
+				"node-1787238421977"
+			],
+			"joinType": "equijoin",
+			"columns": [
+				{
+					"from": "node-1787238362075",
+					"keys": [
+						"idvendedor"
+					]
+				},
+				{
+					"from": "node-1787238421977",
+					"keys": [
+						"idvendedor_vendas"
+					]
+				}
+			],
+			"columnConditions": [
+				"="
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Join.493120c2.svg",
+			"generatedNodeName": "JoinVendedores_node1787238428993",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "idcliente_vendas",
+						"fullPath": [
+							"idcliente_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "sexo",
+						"fullPath": [
+							"sexo"
+						],
+						"type": "string"
+					},
+					{
+						"key": "cliente",
+						"fullPath": [
+							"cliente"
+						],
+						"type": "string"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					},
+					{
+						"key": "idvendedor",
+						"fullPath": [
+							"idvendedor"
+						],
+						"type": "long"
+					},
+					{
+						"key": "estado",
+						"fullPath": [
+							"estado"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idproduto",
+						"fullPath": [
+							"idproduto"
+						],
+						"type": "long"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda",
+						"fullPath": [
+							"idvenda"
+						],
+						"type": "long"
+					},
+					{
+						"key": "nome",
+						"fullPath": [
+							"nome"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idcliente",
+						"fullPath": [
+							"idcliente"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idvenda_itensvendas",
+						"fullPath": [
+							"idvenda_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "status",
+						"fullPath": [
+							"status"
+						],
+						"type": "string"
+					},
+					{
+						"key": "produto",
+						"fullPath": [
+							"produto"
+						],
+						"type": "string"
+					},
+					{
+						"key": "idvendedor_vendas",
+						"fullPath": [
+							"idvendedor_vendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "idproduto_itensvendas",
+						"fullPath": [
+							"idproduto_itensvendas"
+						],
+						"type": "long"
+					},
+					{
+						"key": "preco",
+						"fullPath": [
+							"preco"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787239052381": {
+			"classification": "Transform",
+			"type": "ApplyMapping",
+			"name": "FinalSchemaView",
+			"inputs": [
+				"node-1787238428993"
+			],
+			"mapping": [
+				{
+					"toKey": "idcliente_vendas",
+					"fromPath": [
+						"idcliente_vendas"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "desconto",
+					"fromPath": [
+						"desconto"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "valorunitario",
+					"fromPath": [
+						"valorunitario"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "valortotal",
+					"fromPath": [
+						"valortotal"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "sexo",
+					"fromPath": [
+						"sexo"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "cliente",
+					"fromPath": [
+						"cliente"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "total",
+					"fromPath": [
+						"total"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				},
+				{
+					"toKey": "idvendedor",
+					"fromPath": [
+						"idvendedor"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "estado",
+					"fromPath": [
+						"estado"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "idproduto",
+					"fromPath": [
+						"idproduto"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "data",
+					"fromPath": [
+						"data"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "quantidade",
+					"fromPath": [
+						"quantidade"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": false
+				},
+				{
+					"toKey": "idvenda",
+					"fromPath": [
+						"idvenda"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "nome",
+					"fromPath": [
+						"nome"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "idcliente",
+					"fromPath": [
+						"idcliente"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "idvenda_itensvendas",
+					"fromPath": [
+						"idvenda_itensvendas"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "status",
+					"fromPath": [
+						"status"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "produto",
+					"fromPath": [
+						"produto"
+					],
+					"toType": "string",
+					"fromType": "string",
+					"dropped": false
+				},
+				{
+					"toKey": "idvendedor_vendas",
+					"fromPath": [
+						"idvendedor_vendas"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "idproduto_itensvendas",
+					"fromPath": [
+						"idproduto_itensvendas"
+					],
+					"toType": "long",
+					"fromType": "long",
+					"dropped": true
+				},
+				{
+					"toKey": "preco",
+					"fromPath": [
+						"preco"
+					],
+					"toType": "double",
+					"fromType": "double",
+					"dropped": false
+				}
+			],
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/Apply-mapping.2595af12.svg",
+			"generatedNodeName": "FinalSchemaView_node1787239052381",
+			"codeGenVersion": 2,
+			"outputSchemas": [
+				[
+					{
+						"key": "desconto",
+						"fullPath": [
+							"desconto"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valorunitario",
+						"fullPath": [
+							"valorunitario"
+						],
+						"type": "double"
+					},
+					{
+						"key": "valortotal",
+						"fullPath": [
+							"valortotal"
+						],
+						"type": "double"
+					},
+					{
+						"key": "sexo",
+						"fullPath": [
+							"sexo"
+						],
+						"type": "string"
+					},
+					{
+						"key": "cliente",
+						"fullPath": [
+							"cliente"
+						],
+						"type": "string"
+					},
+					{
+						"key": "total",
+						"fullPath": [
+							"total"
+						],
+						"type": "double"
+					},
+					{
+						"key": "estado",
+						"fullPath": [
+							"estado"
+						],
+						"type": "string"
+					},
+					{
+						"key": "data",
+						"fullPath": [
+							"data"
+						],
+						"type": "string"
+					},
+					{
+						"key": "quantidade",
+						"fullPath": [
+							"quantidade"
+						],
+						"type": "long"
+					},
+					{
+						"key": "nome",
+						"fullPath": [
+							"nome"
+						],
+						"type": "string"
+					},
+					{
+						"key": "status",
+						"fullPath": [
+							"status"
+						],
+						"type": "string",
+						"partitionIndex": 0
+					},
+					{
+						"key": "produto",
+						"fullPath": [
+							"produto"
+						],
+						"type": "string"
+					},
+					{
+						"key": "preco",
+						"fullPath": [
+							"preco"
+						],
+						"type": "double"
+					}
+				]
+			]
+		},
+		"node-1787239424604": {
+			"classification": "DataSink",
+			"type": "S3",
+			"name": "DataLake",
+			"inputs": [
+				"node-1787239052381"
+			],
+			"format": "glueparquet",
+			"compression": "snappy",
+			"numberTargetPartitions": "0",
+			"path": "s3://aws-glue-athena-datalake-265413947475-sa-east-1-an/datalake/",
+			"partitionKeys": [
+				"status"
+			],
+			"updateCatalogOptions": "none",
+			"schemaChangePolicy": {
+				"enableUpdateCatalog": false
+			},
+			"autoDataQuality": {
+				"isEnabled": true,
+				"evaluationContext": "EvaluateDataQuality_node1787235131458"
+			},
+			"additionalOptions": {},
+			"iconUrl": "https://a.b.cdn.console.awsstatic.com/a/v1/CR4CU437PFYAQYYJRLTXODBC7OUBGHJT7QL6LMJWJU6GFUSVD2DA/static/media/s3.2a166713.svg",
+			"generatedNodeName": "DataLake_node1787239424604",
+			"codeGenVersion": 2
+		}
+	},
+	"jobConfig": {
+		"command": "glueetl",
+		"description": "",
+		"role": "arn:aws:iam::265413947475:role/glue_acess_adm",
+		"scriptName": "JobVendas.py",
+		"version": "5.1",
+		"language": "python-3",
+		"scriptLocation": "s3://aws-glue-athena-datalake-265413947475-sa-east-1-an/scripts/",
+		"temporaryDirectory": "s3://aws-glue-athena-datalake-265413947475-sa-east-1-an/temp/",
+		"timeout": 480,
+		"maxConcurrentRuns": 1,
+		"workerType": "G.1X",
+		"numberOfWorkers": 10,
+		"maxRetries": 0,
+		"metrics": true,
+		"observabilityMetrics": true,
+		"security": "none",
+		"bookmark": "job-bookmark-disable",
+		"logging": true,
+		"spark": true,
+		"sparkConfiguration": "standard",
+		"sparkPath": "s3://aws-glue-athena-datalake-265413947475-sa-east-1-an/logs/",
+		"serverEncryption": false,
+		"glueHiveMetastore": true,
+		"etlAutoScaling": false,
+		"etlAutoTuning": true,
+		"jobParameters": [],
+		"tags": [],
+		"connectionsList": [],
+		"jobMode": "VISUAL_MODE",
+		"name": "JobVendas",
+		"pythonPath": "",
+		"dataLineage": false
+	},
+	"hasBeenSaved": false
+}
