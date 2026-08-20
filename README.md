@@ -21,9 +21,10 @@ Every project here reflects hands-on decisions: infrastructure choices, performa
 |---|---------|-------|--------|
 | 01 | [AWS Redshift DW + Looker Studio](./aws-redshift-dw/README.md) | Redshift Serverless · S3 · SQL · Looker Studio | ✅ Complete |
 | 02 | [S3 → RDS PostgreSQL Ingestion Pipeline](./aws-s3-rds-ingestion/README.md) | boto3 · psycopg2 · S3 · RDS PostgreSQL | ✅ Complete |
-| 03 | [Spark & Delta Lake Fundamentals](https://github.com/HeulerSilva/DataLake/tree/main/DataFrame_Base1) | PySpark · Delta Lake · Unity Catalog | ✅ Complete |
-| 04 | [ETL Pipeline — IBGE Public API](https://github.com/HeulerSilva/DataLake/tree/main/ETL_Base1) | PySpark · Delta Lake · REST API | ✅ Complete |
-| 05 | Airflow Pipeline Orchestration | Airflow · Docker · Python | 🔜 Planned |
+| 03 | [Kinesis Streaming — Data Streams & Firehose](./aws-kinesis-streaming/README.md) | Kinesis Data Streams · Amazon Data Firehose · boto3 · S3 | ✅ Complete |
+| 04 | [Spark & Delta Lake Fundamentals](https://github.com/HeulerSilva/DataLake/tree/main/DataFrame_Base1) | PySpark · Delta Lake · Unity Catalog | ✅ Complete |
+| 05 | [ETL Pipeline — IBGE Public API](https://github.com/HeulerSilva/DataLake/tree/main/ETL_Base1) | PySpark · Delta Lake · REST API | ✅ Complete |
+| 06 | Airflow Pipeline Orchestration | Airflow · Docker · Python | 🔜 Planned |
 
 📁 [View Databricks lab projects →](https://github.com/HeulerSilva/DataLake)
 
@@ -35,6 +36,7 @@ Every project here reflects hands-on decisions: infrastructure choices, performa
 ![SQL](https://img.shields.io/badge/SQL-4479A1?style=flat&logo=postgresql&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-232F3E?style=flat&logo=amazonaws&logoColor=white)
 ![Redshift](https://img.shields.io/badge/Redshift-8C4FFF?style=flat&logo=amazon-redshift&logoColor=white)
+![Kinesis](https://img.shields.io/badge/Kinesis-8C4FFF?style=flat&logo=amazonaws&logoColor=white)
 ![Databricks](https://img.shields.io/badge/Databricks-FF3621?style=flat&logo=databricks&logoColor=white)
 ![dbt](https://img.shields.io/badge/dbt-FF694B?style=flat&logo=dbt&logoColor=white)
 ![Airflow](https://img.shields.io/badge/Airflow-017CEE?style=flat&logo=apacheairflow&logoColor=white)
